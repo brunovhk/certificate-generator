@@ -20,6 +20,6 @@ imagettftext($image, 32,0, 350,320, $titleColor,$font_path2, utf8_decode($fullna
 imagestring($image, 5, 580 ,600,utf8_decode("Concluído em: ") . date("d/m/Y"), $titleColor);
 
 header('Content-Type: image/jpeg');
-
+header('Content-Disposition: attachment; filename="Certificado.jpeg"');
 imagejpeg($image);
 imagedestroy($image);
